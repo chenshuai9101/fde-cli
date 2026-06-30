@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta:__legacy__"
+
+[project]
+name = "fde-cli"
+version = "1.0.0"
+description = "FDE — Frontline Deployment Engineering (前线部署工程)"
+readme = "README.md"
+authors = [
+    { name = "Muyunye", email = "chenshuai9101@163.com" },
+]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "pydantic>=2.0",
+]
+keywords = ["fde", "ai-deployment", "frontline-engineering", "automation"]
+
+[project.urls]
+Homepage = "https://github.com/chenshuai9101/fde-cli"
+Repository = "https://github.com/chenshuai9101/fde-cli"
+
+[project.scripts]
+fde = "fde.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["fde*"]
